@@ -11,16 +11,22 @@ class CounterWidget : public QWidget
     Q_OBJECT
 
 public:
+
     CounterWidget(QWidget *parent = nullptr);
     ~CounterWidget();
 
 public slots:
-    void updateCounter();
+
+    void newCounter();
 
 private:
-     int m_count;
+
+    void newLED();
+    int m_count;
      QTimer m_timer;
      Gpio m_gpio;
+     QLCDNumber* m_LCD = nullptr;
+     int m_number;
 
 };
 

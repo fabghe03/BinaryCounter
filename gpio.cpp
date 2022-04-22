@@ -22,9 +22,11 @@ Gpio::~Gpio()
 {
     // Cleanup GPIO
     int init_level = 0;
-    for (auto pin : LEDS)
+    for (auto pin : LEDS){
+
         lgGpioWrite(m_handle, pin, init_level);
-    lgGpiochipClose(m_handle);
+        lgGpiochipClose(m_handle);
+    }
 }
 
 // Write to pins
