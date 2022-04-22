@@ -50,6 +50,4 @@ void CounterWidget::newCounter()
     newLED();
 }
 
-//m_number = (m_number - 1) & 0xF; = 0
-//m_number = 0; =1
-//m_number = (m_number + 1) & 0xF; = 2
+
